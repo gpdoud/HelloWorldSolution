@@ -15,13 +15,13 @@ namespace HelloWorldProject {
 			int incrementValue = 7;
 			return nbr + incrementValue;
 		}
-
+		// an example of interpolation
 		string ToFullName(string name1, string name2) {
 			return $"{name1} {name2}";
 			// or
 			// return name1 + " " + name2;
 		}
-
+		// These are an example of overloaded methods
 		int AddNumbers(int parameter1, int parameter2) {
 			return parameter1 + parameter2;
 		}
