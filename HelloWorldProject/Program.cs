@@ -8,11 +8,55 @@ namespace HelloWorldProject {
 	class Program {
 		// properties (variables) go first
 		static int Age;
+		int Counter = 0;
 		// methods (functions) go last
+
+		int IncrementNumber(int nbr) {
+			int incrementValue = 7;
+			return nbr + incrementValue;
+		}
+
+		string ToFullName(string name1, string name2) {
+			return $"{name1} {name2}";
+			// or
+			// return name1 + " " + name2;
+		}
+
+		int AddNumbers(int parameter1, int parameter2) {
+			return parameter1 + parameter2;
+		}
+		int AddNumbers(int parameter1, int parameter2, int parameter3) {
+			return parameter1 + parameter2 + parameter3;
+		}
+		double AddNumbers(double parameter1, double parameter2) {
+			return parameter1 + parameter2;
+		}
+		int SubtractTwoNumbers(int parameter1, int parameter2) {
+			return parameter1 - parameter2;
+		}
+
+		void Print(string message) {
+			Console.WriteLine(message);
+		}
+
 		static void Main(string[] args) {
-			System.Console.WriteLine("Hello, world!");
+			new Program().Run();
+		}
+		void Run() {
+			var sum = AddNumbers(2, 3);
+			Print(sum.ToString());
+			Print(AddNumbers(2, 3, 4).ToString());
+			Print(AddNumbers(2.2, 3.3).ToString());
+			var diff = SubtractTwoNumbers(5, 3);
+			Print(diff.ToString());
+			//var fullname = ToFullName("Santa", "Claus");
+			Print(ToFullName("Santa", "Claus"));
+			Print(IncrementNumber(6).ToString());
+
+
+			Print("Hello, world!");
 			Age = 0;
-			Console.WriteLine(Age);
+			Print(Age.ToString());
 			int Counter = 1;
 			Console.WriteLine("Value of counter is " + Counter);
 			int numerator = 5;
@@ -59,7 +103,7 @@ namespace HelloWorldProject {
 			// booleans
 			bool TrueValue = true; // or false;
 			bool HasBlondHair = false;
-			Console.WriteLine($"The value of the TrueValue variable is {TrueValue}");
+			Print($"The value of the TrueValue variable is {TrueValue}");
 		}
 	}
 }
