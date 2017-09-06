@@ -11,6 +11,11 @@ namespace HelloWorldProject {
 		int Counter = 0;
 		// methods (functions) go last
 
+		string GetUserInput(string prompt) {
+			Console.Write($"{prompt}: ");
+			return Console.ReadLine();
+		}
+
 		int IncrementNumber(int nbr) {
 			int incrementValue = 7;
 			return nbr + incrementValue;
@@ -43,6 +48,9 @@ namespace HelloWorldProject {
 			new Program().Run();
 		}
 		void Run() {
+			var inp = GetUserInput("Enter a string");
+			Print(inp);
+			return;
 			var sum = AddNumbers(2, 3);
 			Print(sum.ToString());
 			Print(AddNumbers(2, 3, 4).ToString());
